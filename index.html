@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Justsmo | Admin</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<div class="big-width">
+		<img class="wave" src="img/wave.png">
+		<div class="container">
+			<div class="img">
+				<img src="img/bg-1.svg">
+			</div>
+			<div class="login-content">
+				<form id="SignInForm" action="https://justsmo.net/admin" method="post">
+					<input type="hidden" name="_csrf_admin"
+						value="96ZoihthioKmWCmzigjtoTdMVDs1dzDXqr5F8-gSymrF6lrvKhfM1PJtWty-RpnmZQJjAgw5fubr5wSwoiCvGQ==">
+					<img src="img/avatar-new.svg">
+					<h2 class="title">Welcome</h2>
+					<div class="input-div one">
+						<div class="i">
+							<i class="fas fa-user"></i>
+						</div>
+						<div class="div">
+							<h5>Username</h5>
+							<input class="input" type="text" id="signinform-login" name="SignInForm[login]"
+								aria-required="true">
+						</div>
+					</div>
+					<div class="input-div pass">
+						<div class="i">
+							<i class="fas fa-lock"></i>
+						</div>
+						<div class="div">
+							<h5>Password</h5>
+							<input type="password" class="input" id="signinform-password" name="SignInForm[password]"
+								aria-required="true">
+						</div>
+					</div>
+					<input type="submit" class="btn" value="Login">
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="small-width">
+		<div class="header">
+
+			<img src="img\mobile-pic.png">
+			<div id="greet">
+				<h1>Welcome</h1>
+				<h1>Back</h1>
+			</div>
+			<div class="login-content-phone">
+				<form id="SignInForm-phone" action="https://justsmo.net/admin" method="post">
+					<input type="hidden" name="_csrf_admin"
+						value="96ZoihthioKmWCmzigjtoTdMVDs1dzDXqr5F8-gSymrF6lrvKhfM1PJtWty-RpnmZQJjAgw5fubr5wSwoiCvGQ==">
+
+					<div class="input-div-phone one-phone">
+						<div class="i">
+							<i class="fas fa-user"></i>
+						</div>
+						<div class="div-phone">
+							<h5>Username</h5>
+							<input class="input" type="text" id="signinform-login" name="SignInForm[login]"
+								aria-required="true">
+						</div>
+					</div>
+					<div class="input-div-phone pass">
+						<div class="i">
+							<i class="fas fa-lock"></i>
+						</div>
+						<div class="div-phone">
+							<h5>Password</h5>
+							<input type="password" class="input" id="signinform-password" name="SignInForm[password]"
+								aria-required="true">
+						</div>
+					</div>
+					<input type="submit" class="btn-phone" value="Login">
+				</form>
+			</div>
+		</div>
+
+	</div>
+	<script type="text/javascript">
+		const inputs = document.querySelectorAll(".input");
+
+		function addcl() {
+			let parent = this.parentNode.parentNode;
+			parent.classList.add("focus");
+		}
+
+		function remcl() {
+			let parent = this.parentNode.parentNode;
+			if (this.value == "") {
+				parent.classList.remove("focus");
+			}
+		}
+
+		inputs.forEach(input => {
+			input.addEventListener("focus", addcl);
+			input.addEventListener("blur", remcl);
+		});
+	</script>
+</body>
+
+</html>
