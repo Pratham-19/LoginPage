@@ -208,13 +208,11 @@ a:hover {
 
 	.header {
 		width: 105%;
-		/* height: 20%; */
 
 	}
 
 	.header img {
 		width: 110vw;
-		/* height: 600px; */
 		height: 70vh;
 	}
 
@@ -222,8 +220,8 @@ a:hover {
 		color: azure;
 		z-index: 1;
 		position: absolute;
-		top: 180px;
-		left: 30px;
+		top: 20vh;
+		left: 10vw;
 	}
 
 	#greet h1 {
@@ -279,7 +277,7 @@ a:hover {
 	.input-div-phone>div>h5 {
 		position: absolute;
 		left: 10px;
-		top: -15%;
+		top: 50%;
 		transform: translateY(-50%);
 		color: #999;
 		font-size: 18px;
@@ -311,7 +309,7 @@ a:hover {
 	}
 
 	.input-div-phone.focus>div>h5 {
-		top: -15px;
+		top: -2px;
 		font-size: 13px;
 	}
 
